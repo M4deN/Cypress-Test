@@ -53,6 +53,16 @@ npm run open
 
 Você pode personalizar e adicionar mais testes no diretório `integration`, organizando-os em subpastas conforme necessário. Além disso, é possível configurar plugins personalizados e adicionar comandos personalizados no diretório `plugins` e `support`, respectivamente.
 
+## CI (Integração Contínua)
+
+O projeto utiliza GitHub Actions para execução de testes automatizados em ambientes de integração contínua. A configuração do fluxo de trabalho pode ser encontrada no arquivo `.github/workflows`:
+
+### Arquivo: .github/workflows/main.yml
+
+```yaml
+name: End-to-End Tests 🧪
+```
+
 ## Licença
 
 Este projeto está licenciado sob a licença ISC.

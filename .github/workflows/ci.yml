@@ -3,7 +3,7 @@ name: Integração Contínua
 on:
   push:
     branches:
-      - main 
+      - main
 
 jobs:
   build:
@@ -16,11 +16,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18' 
+          node-version: '16' 
 
       - name: Instalar Dependências
-        run: |
-          npm ci
+        run: npm ci
 
-      - name: Rodar Testes
-        run: npm run test 
+      - name: Rodar Testes Cypress
+        run: npm test

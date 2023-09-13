@@ -53,6 +53,8 @@ npm run open
 
 Você pode personalizar e adicionar mais testes no diretório `integration`, organizando-os em subpastas conforme necessário. Além disso, é possível configurar plugins personalizados e adicionar comandos personalizados no diretório `plugins` e `support`, respectivamente.
 
+![Testes](https://github.com/M4deN/Cypress-Test/img.jpg)
+
 ## CI (Integração Contínua)
 
 O projeto utiliza GitHub Actions para execução de testes automatizados em ambientes de integração contínua. A configuração do fluxo de trabalho pode ser encontrada no arquivo `.github/workflows`:

@@ -101,6 +101,7 @@ describe('example to-do app', () => {
     })
   })
 ////////////////////////////////////////////////////////////////// refactor script
+
     it('pode excluir todas as tarefas concluídas', () => {
       // Marque uma tarefa como concluída
       cy.get('.toggle').check()  

@@ -4,24 +4,24 @@ describe('example to-do app', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/todo')
   })
-  
+
   it('exibe dois itens de tarefas por padrão', () => {
     cy.get('.todo-list li')
       .should('have.length', 2)
       .first()
       .should('have.text', 'Pay electric bill')
-  })  
-    
+  })
+
   it('pode adicionar novos itens de tarefas', () => {
     const novoItem = 'Alimentar o gato'
     cy.get('[data-test=new-todo]')
-      .type(`${novoItem}{enter}`)    
+      .type(`${novoItem}{enter}`)
     cy.get('.todo-list li')
       .should('have.length', 3)
       .last()
       .should('have.text', novoItem)
   })
-//pt1 testes refatorados fase 1
+  //pt1 testes refatorados fase 1
   it('displays two todo items by default', () => {
     cy.get('.todo-list li').should('have.length', 2)
     cy.get('.todo-list li').first().should('have.text', 'Pay electric bill')
@@ -47,7 +47,7 @@ describe('example to-do app', () => {
           .should('have.class', 'completed')
       })
   })
-  
+
   context('com uma tarefa marcada', () => {
     beforeEach(() => {
       cy.contains('Pay electric bill')
@@ -91,7 +91,7 @@ describe('example to-do app', () => {
         .should('have.text', 'Pay electric bill')
       cy.contains('Walk the dog').should('not.exist')
     })
-////////////////////////////////////////////////////////////////// até aqui
+    ////////////////////////////////////////////////////////////////// até aqui
     it('can delete all completed tasks', () => {
       cy.contains('Clear completed').click()
       cy.get('.todo-list li')
@@ -100,15 +100,15 @@ describe('example to-do app', () => {
       cy.contains('Clear completed').should('not.exist')
     })
   })
-////////////////////////////////////////////////////////////////// refactor script
-    it('pode excluir todas as tarefas concluídas', () => {
-      // Marque uma tarefa como concluída
-      cy.get('.toggle').check()  
-      // Exclua todas as tarefas concluídas
-      cy.contains('Clear completed').click()  
-      // Verifique se a lista de tarefas não contém mais tarefas concluídas
-      cy.get('.todo-list li').should('not.have.text', 'Pay electric bill')  
-      // Verifique se o botão "Clear completed" não existe mais
-      cy.contains('Clear completed').should('not.exist')
+  ////////////////////////////////////////////////////////////////// refactor script
+  it('pode excluir todas as tarefas concluídas', () => {
+    // Marque uma tarefa como concluída
+    cy.get('.toggle').check()
+    // Exclua todas as tarefas concluídas
+    cy.contains('Clear completed').click()
+    // Verifique se a lista de tarefas não contém mais tarefas concluídas
+    cy.get('.todo-list li').should('not.have.text', 'Pay electric bill')
+    // Verifique se o botão "Clear completed" não existe mais
+    cy.contains('Clear completed').should('not.exist')
   })
 })

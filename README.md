@@ -4,7 +4,7 @@ Este repositório contém o código-fonte e os testes automatizados utilizados p
 
 ## Descrição
 
-O projeto consiste na refatoração de uma suíte de testes automatizados utilizando com framework Cypress. Os testes são executados em uma aplicação web Real World App para verificar o correto funcionamento de suas funcionalidades.
+O projeto consiste na refatoração de uma suíte de testes automatizados com framework Cypress. Os testes são executados em uma aplicação web Real World App para verificar o correto funcionamento de suas funcionalidades.
 
 ## Hierarquia de pastas
 
@@ -20,8 +20,8 @@ O projeto consiste na refatoração de uma suíte de testes automatizados utiliz
 
 Para executar os testes automatizados, é necessário ter o seguinte ambiente configurado:
 
-- Node.js
-- Cypress
+- Node.js 16+
+- Cypress 9.6.0 
 
 Certifique-se de ter essas tecnologias instaladas em sua máquina antes de executar os testes.
 

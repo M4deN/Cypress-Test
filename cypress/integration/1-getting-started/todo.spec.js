@@ -103,7 +103,7 @@ describe('example to-do app', () => {
   ////////////////////////////////////////////////////////////////// refactor script
   Cypress._.times(10, () => {
 
-    it.only('pode excluir todas as tarefas concluídas', () => {
+    it('pode excluir todas as tarefas concluídas', () => {
       // Marque uma tarefa como concluída
       cy.get('.toggle').check()
     

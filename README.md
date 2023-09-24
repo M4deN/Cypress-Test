@@ -1,10 +1,10 @@
 # Cypress-Test
 
-Este repositório contém o código-fonte e os testes automatizados desenvolvidos para o Trabalho de Conclusão de Curso (TCC) intitulado Cypress-Test.
+Este repositório contém o código-fonte e os testes automatizados utilizados para o Trabalho de Conclusão de Curso (TCC) Refatoração de testes automatizados utilizando inteligência artificial.
 
 ## Descrição
 
-O projeto consiste em uma suíte de testes automatizados utilizando o framework Cypress. Os testes são executados em uma aplicação web para verificar o correto funcionamento de suas funcionalidades.
+O projeto consiste na refatoração de uma suíte de testes automatizados utilizando com framework Cypress. Os testes são executados em uma aplicação web Real World App para verificar o correto funcionamento de suas funcionalidades.
 
 ## Hierarquia de pastas
 
@@ -42,7 +42,7 @@ npm install
 4. Execute o seguinte comando para abrir a interface do Cypress:
 
 ```shell
-npm run open
+npm run cy:open
 ```
 
 5. Na janela do Cypress, selecione o teste desejado a partir da estrutura de pastas exibida.
@@ -62,7 +62,7 @@ O projeto utiliza GitHub Actions para execução de testes automatizados em ambi
 ### Arquivo: .github/workflows/main.yml
 
 ```yaml
-name: End-to-End Tests 🧪
+name: Integração Contínua Cypress Tests TCC 🧪
 ```
 
 ## Licença

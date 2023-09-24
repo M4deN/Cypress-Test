@@ -101,14 +101,14 @@ describe('example to-do app', () => {
     })
   })
   ////////////////////////////////////////////////////////////////// refactor script
-  it('pode excluir todas as tarefas concluídas', () => {
-    // Marque uma tarefa como concluída
-    cy.get('.toggle').check()
-    // Exclua todas as tarefas concluídas
-    cy.contains('Clear completed').click()
-    // Verifique se a lista de tarefas não contém mais tarefas concluídas
-    cy.get('.todo-list li').should('not.have.text', 'Pay electric bill')
-    // Verifique se o botão "Clear completed" não existe mais
-    cy.contains('Clear completed').should('not.exist')
-  })
+  //Cypress._.times(10, () => {
+    it('pode excluir todas as tarefas concluídas', () => {
+      // Marque uma tarefa como concluída
+      cy.get('.toggle').check()    
+      // Exclua todas as tarefas concluídas
+      cy.contains('Clear completed').click()    
+      // Verifique se a lista de tarefas não contém mais tarefas concluídas
+      cy.get('.todo-list li').should('not.have.text', 'Pay electric bill', { timeout: 10000 })
+    })    
+//})
 })

@@ -67,4 +67,4 @@ name: Integração Contínua Cypress Tests TCC 🧪
 
 ## Licença
 
-Este projeto está licenciado sob a licença ISC.
+Este projeto está licenciado sob a licença MIT.

@@ -1,16 +1,21 @@
-// .eslintrc.json
-
 {
     "env": {
         "browser": true,
         "commonjs": true,
         "es2021": true,
-        "node": true
+        "node": true,
+        "cypress/globals": true // Adicione esta linha para reconhecer comandos do Cypress
     },
-    "extends": "eslint:recommended",
+    "extends": [
+        "eslint:recommended",
+        "plugin:cypress/recommended" // Adicione esta linha para configurar o ESLint para o Cypress
+    ],
     "parserOptions": {
         "ecmaVersion": 12
     },
+    "plugins": [
+        "cypress" // Adicione esta linha para habilitar as regras do Cypress
+    ],
     "rules": {
         "indent": [
             "error",
@@ -30,6 +35,10 @@
         ],
         "no-trailing-spaces": [
             "error"
-        ]
+        ],
+        "cypress/no-unnecessary-waiting": "error", // Adicione esta linha para evitar waits desnecessários
+        "cypress/unsafe-to-chain-command": "warn", // Adicione esta linha para lidar com comandos inseguros
+        "cypress/no-force": "warn", // Adicione esta linha para evitar o uso de force
+        "no-unused-vars": "warn" // Adicione esta linha para tratar variáveis não utilizadas
     }
 }

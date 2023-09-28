@@ -1,4 +1,4 @@
 module.exports = ({
   chromeWebSecurity: false,
-  projectId: "mjytp5"
+  projectId: 'mjytp5'
 })

@@ -1,4 +1,4 @@
-name: Integração Contínua Cypress Tests TCC
+name: Cypress Tests
 
 on:
   push:

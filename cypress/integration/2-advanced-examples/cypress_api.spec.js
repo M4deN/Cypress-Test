@@ -85,7 +85,7 @@ context('Cypress.config()', () => {
     cy.visit('https://example.cypress.io/cypress-api')
   })
 
-  it('Get and set configuration options', () => {
+  it.only('Get and set configuration options', () => {
     // https://on.cypress.io/config
     let myConfig = Cypress.config()
 

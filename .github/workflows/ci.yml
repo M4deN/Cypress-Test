@@ -8,20 +8,23 @@ on:
     - cron: '0 11 * * *'
 
 jobs:
-  build:
-    runs-on: ubuntu-20.04
-
+  eslint:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install modules
+      run: npm install
+    - name: Run ESLint
+      run: npm run lint
+  cypress-tests-desktop:
+    needs: eslint
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/checkout@v3
+      - name: Run end-to-end tests on desktop viewport 🧪
+        uses: cypress-io/github-action@v5
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
         with:
-          node-version: '16' 
-
-      - name: Instalar Dependências
-        run: npm ci
-
-      - name: Rodar Testes Cypress
-        run: npm test
+          command: npm run test

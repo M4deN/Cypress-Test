@@ -55,11 +55,14 @@ Você pode personalizar e adicionar mais testes no diretório `integration`, org
 
 Testes antes de serem Refatorados com auxilio de IA
 
-https://github.com/M4deN/Cypress-Test/assets/43422425/835071d0-0aea-4e6e-b7ff-c7a18a49ef84
+
+https://github.com/M4deN/Cypress-Test/assets/43422425/9d6744d5-f4ea-4f5c-9dbe-54528eaed800
+
 
 Testes pós serem Refatorados com auxilio de IA
 
-https://github.com/M4deN/Cypress-Test/assets/43422425/15a4c2b0-5b4a-4f8c-90c3-b872a3eae024
+
+https://github.com/M4deN/Cypress-Test/assets/43422425/b20ef3ad-802c-4794-a0be-954464f5a3d0
 
 
 ## CI (Integração Contínua)

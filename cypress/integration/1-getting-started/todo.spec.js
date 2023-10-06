@@ -47,7 +47,7 @@ describe('example to-do app', () => {
       cy.contains('Walk the dog').should('not.exist')
     })
 
-    it.only('can delete all completed tasks', () => {
+    it('can delete all completed tasks', () => {
       cy.contains('Clear completed').click()
       cy.get('.todo-list li')
         .should('have.length', 1)

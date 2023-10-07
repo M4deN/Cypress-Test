@@ -4,3 +4,4 @@ cypress/screenshots/
 cypress/videos/
 cypress/integration/2-advanced-examples
 node_modules/
+cypress/integration/1-getting-started/archive.js

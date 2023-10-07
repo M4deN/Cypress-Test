@@ -51,7 +51,7 @@ describe('example to-do app refactor', () => {
       cy.contains('Walk the dog').should('not.exist')
     })
     //Cypress._.times(10, () => {
-    it('pode excluir todas as tarefas concluídas', () => {
+    it.only('pode excluir todas as tarefas concluídas', () => {
       cy.contains('Clear completed', {timeout: 2000}).click()
       // Espera até que a lista de tarefas não contenha mais o texto "Pay electric bill" e tenha comprimento 0
       cy.get('.todo-list li')
@@ -59,7 +59,7 @@ describe('example to-do app refactor', () => {
         .should('have.length', 1)
         // Espera até que o botão "Clear completed" não exista mais
       cy.contains('Clear completed').should('not.exist')
+      //})
     })
-    //})
   })
 })

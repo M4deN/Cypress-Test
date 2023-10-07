@@ -5,7 +5,7 @@ describe('example to-do app refactor', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/todo')
   })
-  Cypress._.times(30, () => {
+  Cypress._.times(50, () => {
     it('exibe dois itens de tarefas por padrão', () => {
       cy.get('.todo-list li')
         .should('have.length', 2)

@@ -5,7 +5,7 @@ describe('example to-do app', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/todo')
   })
-  Cypress._.times(30, () => {
+  Cypress._.times(50, () => {
     it('displays two todo items by default', () => {
       cy.get('.todo-list li').should('have.length', 2)
       cy.get('.todo-list li').first().should('have.text', 'Pay electric bill')

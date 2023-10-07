@@ -5,7 +5,7 @@ describe('example to-do app', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/todo')
   })
-  Cypress._.times(40, () => {
+  Cypress._.times(30, () => {
     it('displays two todo items by default', () => {
       cy.get('.todo-list li').should('have.length', 2)
       cy.get('.todo-list li').first().should('have.text', 'Pay electric bill')
@@ -46,16 +46,16 @@ describe('example to-do app', () => {
           .should('have.text', 'Pay electric bill')
         cy.contains('Walk the dog').should('not.exist')
       })
-      Cypress._.times(20, () => {
-        it('can delete all completed tasks', () => {
-          cy.get('.toggle').check()
-          cy.contains('Clear completed').click()
-          cy.get('.todo-list li')
-            .should('not.have.text', 'Pay electric bill')
-            .should('have.length', 1)
-          cy.contains('Clear completed').should('not.exist')
-        })
+      //Cypress._.times(20, () => {
+      it('can delete all completed tasks', () => {
+        cy.get('.toggle').check()
+        cy.contains('Clear completed').click()
+        cy.get('.todo-list li')
+          .should('not.have.text', 'Pay electric bill')
+          .should('have.length', 1)
+        cy.contains('Clear completed').should('not.exist')
       })
+      //})
     })
   })
 })

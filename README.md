@@ -2,6 +2,8 @@
 
 Este repositório contém o código-fonte e os testes automatizados utilizados para o Trabalho de Conclusão de Curso (TCC) Refatoração de testes automatizados utilizando inteligência artificial.
 
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/M4deN/Cypress-Test/ci.yml?label=Test%20Workflows&logo=GitHub&style=for-the-badge)
+
 ## Descrição
 
 O projeto consiste na refatoração de uma suíte de testes automatizados com framework Cypress. Os testes são executados em uma aplicação web Real World App para verificar o correto funcionamento de suas funcionalidades.

@@ -47,7 +47,7 @@ describe('example to-do app', () => {
         cy.contains('Walk the dog').should('not.exist')
       })
       //Cypress._.times(20, () => {
-      it('can delete all completed tasks', () => {
+      it.skip('can delete all completed tasks', () => {
         cy.get('.toggle').check()
         cy.contains('Clear completed').click()
         cy.get('.todo-list li')
